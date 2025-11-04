@@ -20,39 +20,39 @@ export const HeroSection = () => {
 
   const slides: Slide[] = [
     {
-      title: "Transform Your Future with",
-      highlight: "World-Class Online Learning",
-      description: "Partner with leading universities and industry experts to build the skills that matter.",
+      title: "Unlock Your Potential with",
+      highlight: "Next-Generation Learning",
+      description: "Join thousands of learners mastering in-demand skills through innovative, project-based education.",
       image: heroImage,
       stats: [
-        { value: "160,000+", label: "Online Learners", color: "text-primary" },
-        { value: "700,000+", label: "Enterprise Learners", color: "text-accent" },
-        { value: "700+", label: "Organizations", color: "text-primary" },
-        { value: "6M+", label: "Hours of Content", color: "text-accent" },
+        { value: "250,000+", label: "Active Learners", color: "text-primary" },
+        { value: "1M+", label: "Certifications Issued", color: "text-accent" },
+        { value: "1,200+", label: "Partner Companies", color: "text-primary" },
+        { value: "10M+", label: "Learning Hours", color: "text-accent" },
       ],
     },
     {
-      title: "Partnering With Universities That",
-      highlight: "Shape The Future",
-      description: "Collaborate with top-tier institutions to deliver industry-recognized certifications and degrees.",
+      title: "Collaborate With Institutions That",
+      highlight: "Drive Innovation",
+      description: "Access world-class content from prestigious universities and cutting-edge research institutions.",
       image: heroUniversity,
       stats: [
-        { value: "50+", label: "University Partners", color: "text-primary" },
-        { value: "95%", label: "Completion Rate", color: "text-accent" },
-        { value: "10K+", label: "Courses Available", color: "text-primary" },
-        { value: "150+", label: "Countries", color: "text-accent" },
+        { value: "80+", label: "University Partners", color: "text-primary" },
+        { value: "98%", label: "Student Satisfaction", color: "text-accent" },
+        { value: "15K+", label: "Expert-Led Courses", color: "text-primary" },
+        { value: "180+", label: "Global Markets", color: "text-accent" },
       ],
     },
     {
-      title: "Training Job-Ready Talent &",
-      highlight: "Nurturing Next-Gen Skills",
-      description: "Build a future-ready workforce with cutting-edge technical and leadership training programs.",
+      title: "Empower Your Workforce with",
+      highlight: "Future-Ready Skills",
+      description: "Transform your organization with AI-powered learning paths and industry-recognized certifications.",
       image: heroCollaboration,
       stats: [
-        { value: "85%", label: "Placement Rate", color: "text-primary" },
-        { value: "500+", label: "Corporate Partners", color: "text-accent" },
-        { value: "40%", label: "Salary Increase", color: "text-primary" },
-        { value: "24/7", label: "Learning Support", color: "text-accent" },
+        { value: "92%", label: "Career Advancement", color: "text-primary" },
+        { value: "800+", label: "Enterprise Clients", color: "text-accent" },
+        { value: "55%", label: "Avg. Salary Boost", color: "text-primary" },
+        { value: "24/7", label: "Global Support", color: "text-accent" },
       ],
     },
   ];
@@ -141,7 +141,9 @@ export const HeroSection = () => {
             >
               <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight animate-fade-in">
                 {slide.title}{" "}
-                <span className="text-primary">{slide.highlight}</span>
+                <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
+                  {slide.highlight}
+                </span>
               </h1>
               <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl animate-fade-in" style={{ animationDelay: "0.1s" }}>
                 {slide.description}
