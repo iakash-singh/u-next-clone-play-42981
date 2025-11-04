@@ -8,8 +8,10 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { ArrowRight, GraduationCap } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 export const ProgramsSection = () => {
+  const { ref, isVisible } = useScrollAnimation({ threshold: 0.1 });
   const bankingPrograms = [
     {
       title: "Talent Fulfillment Solutions",
@@ -88,11 +90,13 @@ export const ProgramsSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-background">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
+    <section className="py-20 bg-background overflow-hidden">
+      <div ref={ref} className="container mx-auto px-4">
+        <div className={`text-center mb-12 transition-all duration-700 ${
+          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+        }`}>
           <h2 className="text-3xl md:text-5xl font-bold mb-4">
-            Programs That Drive <span className="text-primary">Businesses</span>
+            Programs That Drive <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">Businesses</span>
           </h2>
         </div>
 
@@ -130,7 +134,7 @@ export const ProgramsSection = () => {
               </Accordion>
 
               <div className="text-center mt-8">
-                <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
+                <Button size="lg" variant="gradient">
                   Explore Now <ArrowRight className="ml-2" />
                 </Button>
               </div>
@@ -164,7 +168,7 @@ export const ProgramsSection = () => {
               </Accordion>
 
               <div className="text-center mt-8">
-                <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
+                <Button size="lg" variant="gradient">
                   Explore Now <ArrowRight className="ml-2" />
                 </Button>
               </div>
@@ -198,7 +202,7 @@ export const ProgramsSection = () => {
               </Accordion>
 
               <div className="text-center mt-8">
-                <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
+                <Button size="lg" variant="gradient">
                   Explore Now <ArrowRight className="ml-2" />
                 </Button>
               </div>

@@ -151,14 +151,15 @@ export const HeroSection = () => {
               <div className="flex flex-col sm:flex-row gap-4 mb-12 animate-fade-in" style={{ animationDelay: "0.2s" }}>
                 <Button
                   size="lg"
-                  className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-8 py-6 hover:scale-105 transition-transform"
+                  variant="gradient"
+                  className="text-lg px-8 py-6"
                 >
                   Explore Programs <ArrowRight className="ml-2" />
                 </Button>
                 <Button
                   size="lg"
                   variant="outline"
-                  className="text-lg px-8 py-6 border-primary text-primary hover:bg-primary/10 hover:scale-105 transition-transform"
+                  className="text-lg px-8 py-6 border-primary text-primary hover:bg-primary/10"
                 >
                   For Enterprises
                 </Button>
